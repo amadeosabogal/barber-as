@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-color: 249 250 251;
+    --surface-color: 255 255 255;
+    --surface-hover: 243 244 246;
+    --border-color: 229 231 235;
+    --primary-color: 194 139 30;
+    --primary-hover: 166 115 18;
+    --text-primary: 17 24 39;
+    --text-secondary: 75 85 99;
+  }
+
+  :root.dark {
+    --bg-color: 15 17 21;
+    --surface-color: 26 29 36;
+    --surface-hover: 37 41 51;
+    --border-color: 44 49 61;
+    --primary-color: 229 169 61;
+    --primary-hover: 242 187 87;
+    --text-primary: 243 244 246;
+    --text-secondary: 156 163 175;
+  }
+
+  body {
+    @apply bg-background text-text-primary font-sans antialiased transition-colors duration-200;
+  }
+}
+
+/* Custom scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-surfaceHover;
+}
